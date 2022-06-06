@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppDataBinding.MainPage">
+
+    <StackLayout>
+        <Label Text="Data Binding"
+               HorizontalOptions="Center"
+               FontSize="Large" 
+               TextColor="Aquamarine"/>
+
+        <Label Text="OneWay"
+               HorizontalOptions="Center"
+               FontSize="Large" 
+               TextColor="Red"/>
+
+        <Entry Text="{Binding Text, Source={x:Reference OneWayTxt}, Mode=OneWay}" />
+        <Entry x:Name="OneWayTxt"/>
+
+
+        <Label Text="TwoWay"
+               HorizontalOptions="Center"
+               FontSize="Large" 
+               TextColor="Red"/>
+
+        <Entry Text="{Binding Text, Source={x:Reference TwoWayTxt}, Mode=TwoWay}" />
+        <Entry x:Name="TwoWayTxt" />
+
+
+        <Label Text="One Way To Source"
+               HorizontalOptions="Center"
+               FontSize="Large" 
+               TextColor="Red"/>
+
+        <Entry Text="{Binding Text, Source={x:Reference OneWaySourceTxt}, Mode=OneTime}" />
+        <Entry x:Name="OneWaySourceTxt" />
+
+    </StackLayout>
+</ContentPage>
